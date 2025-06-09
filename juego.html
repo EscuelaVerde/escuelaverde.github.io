@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpiente Recicladora - 2IM10 Computación</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .group-info {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .score {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        #gameCanvas {
+            border: 3px solid #FFF;
+            border-radius: 10px;
+            background: #E8F5E8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .controls {
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .controls button {
+            background: #FF9800;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .controls button:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .controls button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .game-over {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: background-color 0.5s ease;
+        }
+        
+        .game-over:not(.hidden) {
+            background: rgba(0,0,0,0.8);
+        }
+        
+        .game-over-content {
+            background: #2E7D32;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 3px solid #4CAF50;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transform: scale(1);
+            animation: popIn 0.3s ease-out;
+        }
+        
+        @keyframes popIn {
+            0% {
+                transform: scale(0.5) translateY(-50px);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05) translateY(0);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .trash-types {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .trash-type {
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .speed-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌱 Serpiente Recicladora 🌱</h1>
+    <div class="group-info">2IM10 - Computación</div>
+    
+    <div class="info">
+        <div class="score">Puntuación: <span id="score">0</span></div>
+        <div class="speed-info">Velocidad: <span id="speed">1x</span></div>
+        <div>¡Recoge la basura para ayudar al medio ambiente!</div>
+        <div class="trash-types">
+            <div class="trash-type">🗑️ Orgánica<br>+1 punto</div>
+            <div class="trash-type">♻️ Reciclable<br>+2 puntos</div>
+            <div class="trash-type">🔋 Peligrosa<br>+3 puntos</div>
+            <div class="trash-type">⏱️ Reloj<br>Velocidad 1x</div>
+        </div>
+    </div>
+    
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    
+    <div class="controls">
+        <div>Usa las flechas del teclado o los botones para moverte</div>
+        <div style="margin: 10px 0; font-weight: bold; color: #FFD700;">¡Presiona cualquier flecha para empezar!</div>
+        <button onclick="game.changeDirection('up')">⬆️</button><br>
+        <button onclick="game.changeDirection('left')">⬅️</button>
+        <button onclick="game.restart()">🔄 Reiniciar</button>
+        <button onclick="game.changeDirection('right')">➡️</button><br>
+        <button onclick="game.changeDirection('down')">⬇️</button>
+    </div>
+    
+    <div id="gameOver" class="game-over hidden">
+        <div class="game-over-content">
+            <h2>¡Juego Terminado!</h2>
+            <p>Puntuación final: <span id="finalScore">0</span></p>
+            <p>Velocidad alcanzada: <span id="finalSpeed">1x</span></p>
+            <p>¡Gracias por ayudar a reciclar!</p>
+            <button onclick="game.restart()">🎮 Jugar de nuevo</button>
+        </div>
+    </div>
+
+    <script>
+        class SnakeGame {
+            constructor() {
+                this.canvas = document.getElementById('gameCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.scoreElement = document.getElementById('score');
+                this.speedElement = document.getElementById('speed');
+                this.gameOverElement = document.getElementById('gameOver');
+                this.finalScoreElement = document.getElementById('finalScore');
+                this.finalSpeedElement = document.getElementById('finalSpeed');
+                
+                this.gridSize = 20;
+                this.tileCount = this.canvas.width / this.gridSize;
+                
+                // Configuración de velocidad
+                this.baseSpeed = 150; // ms entre movimientos (menos es más rápido)
+                this.currentSpeed = this.baseSpeed;
+                this.speedLevel = 1;
+                this.speedIncreaseInterval = 20000; // 20 segundos
+                this.lastSpeedIncrease = 0;
+                
+                // Tipos de basura
+                this.trashTypes = [
+                    {emoji: '🗑️', points: 1, color: '#8BC34A', probability: 0.5}, // 50% de probabilidad
+                    {emoji: '♻️', points: 2, color: '#2196F3', probability: 0.3}, // 30% de probabilidad
+                    {emoji: '🔋', points: 3, color: '#FF9800', probability: 0.15}, // 15% de probabilidad
+                    {emoji: '⏱️', points: 0, color: '#9C27B0', probability: 0.05, isClock: true} // 5% de probabilidad
+                ];
+                
+                this.gameLoop = null;
+                this.lastUpdateTime = 0;
+                this.nextDirection = null;
+                this.inputBuffer = [];
+                this.init();
+                this.setupControls();
+            }
+            
+            init() {
+                this.snake = [{x: 10, y: 10}];
+                this.dx = 0;
+                this.dy = 0;
+                this.score = 0;
+                this.gameRunning = false;
+                this.gameStarted = false;
+                this.nextDirection = null;
+                this.inputBuffer = [];
+                
+                // Resetear velocidad
+                this.currentSpeed = this.baseSpeed;
+                this.speedLevel = 1;
+                this.lastSpeedIncrease = 0;
+                
+                this.scoreElement.textContent = this.score;
+                this.speedElement.textContent = this.speedLevel + 'x';
+                this.gameOverElement.classList.add('hidden');
+                
+                this.randomFood();
+                this.draw();
+            }
+            
+            randomFood() {
+                // Seleccionar un tipo de basura basado en probabilidades
+                const random = Math.random();
+                let cumulativeProbability = 0;
+                let selectedType = this.trashTypes[0]; // Por defecto el primero
+                
+                for (const type of this.trashTypes) {
+                    cumulativeProbability += type.probability;
+                    if (random < cumulativeProbability) {
+                        selectedType = type;
+                        break;
+                    }
+                }
+                
+                // Generar posiciones hasta encontrar una vacía
+                let newFoodPosition;
+                let positionIsValid = false;
+                
+                while (!positionIsValid) {
+                    newFoodPosition = {
+                        x: Math.floor(Math.random() * this.tileCount),
+                        y: Math.floor(Math.random() * this.tileCount),
+                        type: selectedType
+                    };
+                    
+                    // Verificar que la posición no esté ocupada por la serpiente
+                    positionIsValid = true;
+                    for (const segment of this.snake) {
+                        if (segment.x === newFoodPosition.x && segment.y === newFoodPosition.y) {
+                            positionIsValid = false;
+                            break;
+                        }
+                    }
+                }
+                
+                this.food = newFoodPosition;
+            }
+            
+            draw() {
+                // Limpiar canvas
+                this.ctx.fillStyle = '#E8F5E8';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Dibujar cuadrícula
+                this.ctx.strokeStyle = 'rgba(76, 175, 80, 0.1)';
+                this.ctx.lineWidth = 1;
+                for (let i = 0; i <= this.tileCount; i++) {
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(i * this.gridSize, 0);
+                    this.ctx.lineTo(i * this.gridSize, this.canvas.height);
+                    this.ctx.stroke();
+                    
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(0, i * this.gridSize);
+                    this.ctx.lineTo(this.canvas.width, i * this.gridSize);
+                    this.ctx.stroke();
+                }
+                
+                // Configurar texto
+                this.ctx.font = `${this.gridSize-2}px Arial`;
+                this.ctx.textAlign = 'center';
+                this.ctx.textBaseline = 'middle';
+                
+                // Dibujar serpiente con efectos
+                this.snake.forEach((segment, index) => {
+                    const x = segment.x * this.gridSize;
+                    const y = segment.y * this.gridSize;
+                    
+                    if (index === 0) {
+                        // Cabeza
+                        const gradient = this.ctx.createRadialGradient(
+                            x + this.gridSize/2, y + this.gridSize/2, 0,
+                            x + this.gridSize/2, y + this.gridSize/2, this.gridSize/2
+                        );
+                        gradient.addColorStop(0, '#66BB6A');
+                        gradient.addColorStop(1, '#4CAF50');
+                        
+                        this.ctx.fillStyle = gradient;
+                        this.ctx.fillRect(x + 2, y + 2, this.gridSize - 4, this.gridSize - 4);
+                        this.ctx.fillText('♻️', x + this.gridSize/2, y + this.gridSize/2);
+                    } else {
+                        // Cuerpo
+                        const alpha = Math.max(0.6, 1 - (index * 0.1));
+                        this.ctx.fillStyle = `rgba(102, 187, 106, ${alpha})`;
+                        this.ctx.fillRect(x + 3, y + 3, this.gridSize - 6, this.gridSize - 6);
+                        this.ctx.fillText('🌱', x + this.gridSize/2, y + this.gridSize/2);
+                    }
+                });
+                
+                // Dibujar basura
+                const foodX = this.food.x * this.gridSize;
+                const foodY = this.food.y * this.gridSize;
+                
+                this.ctx.fillStyle = 'rgba(0,0,0,0.2)';
+                this.ctx.fillRect(foodX + 4, foodY + 4, this.gridSize - 4, this.gridSize - 4);
+                
+                this.ctx.fillStyle = this.food.type.color;
+                this.ctx.fillRect(foodX + 2, foodY + 2, this.gridSize - 4, this.gridSize - 4);
+                this.ctx.fillText(this.food.type.emoji, foodX + this.gridSize/2, foodY + this.gridSize/2);
+            }
+            
+            update(timestamp) {
+                if (!this.gameRunning) return;
+                
+                // Aumentar velocidad cada 20 segundos
+                if (timestamp - this.lastSpeedIncrease > this.speedIncreaseInterval) {
+                    this.increaseSpeed();
+                    this.lastSpeedIncrease = timestamp;
+                }
+                
+                // Procesar input buffer para movimientos más fluidos
+                if (this.inputBuffer.length > 0) {
+                    const direction = this.inputBuffer.shift();
+                    this.processDirectionChange(direction);
+                }
+                
+                const head = {x: this.snake[0].x + this.dx, y: this.snake[0].y + this.dy};
+                
+                // Verificar colisiones
+                if (head.x < 0 || head.x >= this.tileCount || head.y < 0 || head.y >= this.tileCount) {
+                    this.gameOver();
+                    return;
+                }
+                
+                for (let segment of this.snake) {
+                    if (head.x === segment.x && head.y === segment.y) {
+                        this.gameOver();
+                        return;
+                    }
+                }
+                
+                this.snake.unshift(head);
+                
+                // Verificar si comió basura
+                if (head.x === this.food.x && head.y === this.food.y) {
+                    if (this.food.type.isClock) {
+                        // Si es un reloj, resetear la velocidad
+                        this.currentSpeed = this.baseSpeed;
+                        this.speedLevel = 1;
+                        this.speedElement.textContent = this.speedLevel + 'x';
+                        this.lastSpeedIncrease = timestamp; // Resetear el temporizador de aumento de velocidad
+                    } else {
+                        this.score += this.food.type.points;
+                        this.scoreElement.textContent = this.score;
+                    }
+                    this.randomFood();
+                } else {
+                    this.snake.pop();
+                }
+                
+                this.draw();
+            }
+            
+            increaseSpeed() {
+                // Aumentar velocidad reduciendo el tiempo entre movimientos
+                this.currentSpeed = Math.max(50, this.currentSpeed * 0.8); // No bajar de 50ms
+                this.speedLevel += 0.5;
+                this.speedElement.textContent = this.speedLevel.toFixed(1) + 'x';
+                
+                // Reiniciar el game loop con la nueva velocidad
+                if (this.gameLoop) {
+                    cancelAnimationFrame(this.gameLoop);
+                }
+                this.startGameLoop();
+            }
+            
+            processDirectionChange(direction) {
+                switch(direction) {
+                    case 'up':
+                        if (this.dy !== 1) { this.dx = 0; this.dy = -1; }
+                        break;
+                    case 'down':
+                        if (this.dy !== -1) { this.dx = 0; this.dy = 1; }
+                        break;
+                    case 'left':
+                        if (this.dx !== 1) { this.dx = -1; this.dy = 0; }
+                        break;
+                    case 'right':
+                        if (this.dx !== -1) { this.dx = 1; this.dy = 0; }
+                        break;
+                }
+            }
+            
+            gameOver() {
+                this.gameRunning = false;
+                this.gameStarted = false;
+                if (this.gameLoop) {
+                    cancelAnimationFrame(this.gameLoop);
+                    this.gameLoop = null;
+                }
+                
+                setTimeout(() => {
+                    this.finalScoreElement.textContent = this.score;
+                    this.finalSpeedElement.textContent = this.speedLevel.toFixed(1) + 'x';
+                    this.gameOverElement.classList.remove('hidden');
+                }, 500);
+            }
+            
+            start() {
+                if (!this.gameStarted) {
+                    this.gameRunning = true;
+                    this.gameStarted = true;
+                    this.lastSpeedIncrease = performance.now();
+                    this.startGameLoop();
+                }
+            }
+            
+            startGameLoop() {
+                this.lastUpdateTime = performance.now();
+                this.gameLoop = requestAnimationFrame(this.gameLoopCallback.bind(this));
+            }
+            
+            gameLoopCallback(timestamp) {
+                if (timestamp - this.lastUpdateTime > this.currentSpeed) {
+                    this.update(timestamp);
+                    this.lastUpdateTime = timestamp;
+                }
+                this.gameLoop = requestAnimationFrame(this.gameLoopCallback.bind(this));
+            }
+            
+            restart() {
+                if (this.gameLoop) {
+                    cancelAnimationFrame(this.gameLoop);
+                    this.gameLoop = null;
+                }
+                this.init();
+            }
+            
+            changeDirection(direction) {
+                if (!this.gameStarted && (this.dx === 0 && this.dy === 0)) {
+                    this.start();
+                }
+                
+                if (!this.gameRunning) return;
+                
+                // Solo permitir un cambio de dirección por cuadro
+                if (this.inputBuffer.length < 2) {
+                    this.inputBuffer.push(direction);
+                }
+            }
+            
+            setupControls() {
+                document.addEventListener('keydown', (e) => {
+                    switch(e.key) {
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.changeDirection('up');
+                            break;
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.changeDirection('down');
+                            break;
+                        case 'ArrowLeft':
+                            e.preventDefault();
+                            this.changeDirection('left');
+                            break;
+                        case 'ArrowRight':
+                            e.preventDefault();
+                            this.changeDirection('right');
+                            break;
+                    }
+                });
+            }
+        }
+        
+        // Inicializar el juego
+        const game = new SnakeGame();
+    </script>
+</body>
+</html>

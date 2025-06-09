@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Suculentas - Expresión Oral y Escrita II</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+        
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("f-f.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+        
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: var(--verde-oscuro);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .integrante-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--verde-oscuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Filosofia-II</h1>
+        <hr class="header-divider">
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imágenes de Suculentas</h2>
+            
+            <div class="integrante-card">
+                <h3>Echeveria</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85" alt="Echeveria suculenta">
+                <p>La Echeveria es un género de plantas suculentas con forma de roseta, muy popular por su belleza y variedad de colores.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Aloe Vera</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1551651658-4c0e5a0e5a0e" alt="Aloe vera">
+                <p>El Aloe vera es una suculenta conocida por sus propiedades medicinales y sus hojas carnosas que almacenan agua.</p>
+            </div>
+
+            <div class="integrante-card">
+                <h3>Sedum Morganianum</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Cola de burro">
+                <p>El Sedum morganianum, conocido como "cola de burro", es una suculenta colgante con tallos cubiertos de hojas carnosas.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Agave Americana</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae" alt="Agave">
+                <p>El Agave americana es una suculenta imponente con hojas grandes y puntiagudas, originaria de México.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Kalanchoe Tomentosa</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Planta panda">
+                <p>La Kalanchoe tomentosa, conocida como "planta panda", es una suculenta con hojas aterciopeladas y bordes marrones.</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>Docente: Profa. Alma Laura</h2>
+            
+            <h3>Integrantes del equipo:</h3>
+            <ul>
+                <li><strong>Díaz Hernández Brisia Renata</strong></li>
+                <li><strong>García Morales Harumi</strong></li>
+                <li><strong>Gómez Zuñida Adriana</strong></li>
+                <li><strong>Morales Salazar Ángel Alfonso</strong></li>
+                <li><strong>Padilla Gutiérrez Allisson Karina</strong></li>
+                <li><strong>Parra Santoyo Víctor Maximiliano</strong></li>
+            </ul>
+            
+            <h3>Grupo: 2IM10</h3>
+
+            <h2>Las Suculentas: Belleza y Resiliencia</h2>
+
+            <h3>¿Qué son las suculentas?</h3>
+            <p>Las suculentas son plantas con una gran capacidad de almacenar agua, lo que les permite sobrevivir en ambientes áridos. Son resistentes, decorativas y muy diversas, con formas y colores sorprendentes.</p>
+
+            <h3>Importancia en tiempos de crisis hídrica</h3>
+            <p>Frente a la megasequía en Chile y el mundo, las suculentas se vuelven protagonistas en jardines públicos y privados. Municipios como Providencia han reemplazado el césped por suculentas, ahorrando millones de litros de agua mensuales.</p>
+
+            <h3>Reproducción de las suculentas</h3>
+            <h4>Reproducción asexual:</h4>
+            <ul>
+                <li><strong>Por hojas:</strong> como la Echeveria.</li>
+                <li><strong>Por hijuelos:</strong> como Aloe vera y Agave.</li>
+                <li><strong>Por esquejes:</strong> como Sedum y Crassula.</li>
+                <li><strong>Por bulbos o clonación:</strong> como el Kalanchoe.</li>
+            </ul>
+            <h4>Reproducción sexual:</h4>
+            <p>Mediante flores, polinización y semillas.</p>
+
+            <h3>Genética y variedades</h3>
+            <p>Gracias a mutaciones y cruces, existen suculentas crestadas, monstruosas, variegadas y muchas más. Viveros crean híbridos con formas únicas como la Echeveria 'Perle von Nurnberg'.</p>
+
+            <h2>Tipos de suculentas</h2>
+            <p>Las suculentas son un grupo diverso de plantas conocidas por su capacidad de almacenar agua en sus hojas, tallos o raíces. Esta adaptación les permite prosperar en ambientes áridos y semiáridos con escasez de agua. Estas crecen en diferentes ecosistemas, como acantilados costeros, regiones alpinas y zonas tropicales. Existen varias familias de las suculentas, algunos de estos son: Crassulaceae, cactáceas, agavaceae, asfodeláceas, apocynaceae, euphorbiaceae y portulacaceae.</p>
+
+            <h4>Áloe vera</h4>
+            <p>El áloe vera es una suculenta versátil y resistente, ideal tanto para interiores como exteriores, conocida por sus propiedades medicinales. Sus hojas son carnosas y almacenan el agua.</p>
+
+            <h4>Agave Americana</h4>
+            <p>Esta es una suculenta imponente con hojas grandes y puntiagudas de color verde azulado, originaria de México. Puede estar expuesta al sol directo.</p>
+
+            <h4>Sedum morganianum (cola de burro)</h4>
+            <p>Esta es una suculenta llamativa, apreciada por sus tallos en cascada, prospera con luz brillante e indirecta y poca agua. Lo que la convierte en una opción de bajo mantenimiento, estas suelen adornar las casas estando colgadas.</p>
+
+            <h4>Kalanchoe tomentosa (planta panda)</h4>
+            <p>Es una suculenta resistente y fácil de cultivar. Estas no florecen con tanta frecuencia y es principalmente una planta de interior.</p>
+
+            <h4>Euphorbia milii (corona de espinas)</h4>
+            <p>Esta suculenta presenta tallos leñosos y densamente espinosos y hojas de color verde brillante. Esta suculenta permanece todo el año produciendo flores y puede estar expuesta al sol.</p>
+
+            <h4>Senecio rowleyanus (collar de perlas)</h4>
+            <p>Esta suculenta es muy llamativa, ideal tanto para interiores como para exteriores. Sus tallos de cascada con hojas redondas prosperan en lugares cálidos y sombreados.</p>
+
+            <h2>Tipo de crecimiento en las suculentas</h2>
+            <p>Las suculentas son un tipo de planta que puede crecer en diversos ambientes. Las suculentas generalmente tienen un crecimiento lento, pero algunas variedades crecen más rápido que otras. Por ejemplo, la suculenta madreperla (gracias a sus ramificaciones) y la mala madre crecen rápidamente. Además, algunas suculentas como la Portulacaria afra, conocida como planta elefante, también tienen un crecimiento más veloz debido a su resistencia a la sequía y a su bajo mantenimiento.</p>
+
+            <h4>Áloe vera</h4>
+            <ul>
+                <li><strong>Crecimiento rizomatoso:</strong> El aloe vera crece de manera horizontal y subterránea, lo que requiere un espacio adecuado para que sus raíces se desarrollen.</li>
+                <li><strong>Tamaño de las hojas:</strong> Las hojas pueden alcanzar un ancho de hasta 65.7 cm y un grosor de hasta 48.5 cm.</li>
+                <li><strong>Altura máxima:</strong> En algunas variedades, el aloe vera puede alcanzar hasta 4 metros de altura.</li>
+            </ul>
+
+            <h4>Senecio rowleyanus</h4>
+            <p>El Senecio rowleyanus tiene diferentes fases de crecimiento. En la primera fase, la semilla latente crece y se transforma en plántula. Las semillas necesitan una temperatura de 75-90°F (25-32°C) para germinar y la época ideal para que crezca con vigor es durante el verano, ya que la temperatura más adecuada ronda los 85°F (30°C).</p>
+
+            <h4>Euphorbia tirucalli (cactus lápiz)</h4>
+            <p>La Euphorbia tirucalli, comúnmente conocida como cactus lápiz o planta lápiz, es una especie de planta suculenta originaria de África, aunque se encuentra extendida en regiones tropicales de todo el mundo. Esta planta es conocida por sus característicos tallos en forma de lápiz y puede cambiar de color, llegando a tener tonos rojos y anaranjados que parecen fuego, especialmente cuando está expuesta a pleno sol.</p>
+
+            <h4>Euphorbia milii (corona de espinas)</h4>
+            <ul>
+                <li><strong>Crecimiento lento:</strong> La Euphorbia milii crece de manera gradual y puede tardar tiempo en alcanzar su tamaño máximo.</li>
+                <li><strong>Formación de ramas:</strong> Produce ramas laterales que crecen desde la base del tallo principal, contribuyendo a su forma arbustiva.</li>
+            </ul>
+            <p>Es importante tener en cuenta que la planta puede excretar una savia lechosa que puede causar irritación de la piel, por lo que se debe tener cuidado al manipularla.</p>
+
+            <h4>Sedum morganianum (cola de burro)</h4>
+            <p>El Sedum morganianum, comúnmente conocido como cola de burro, tiene un hábito de crecimiento colgante único. Esta planta perenne de hojas carnosas y de color verde azulado recubre sus tallos alargados y péndulos, creando cascadas de hojas que pueden alcanzar longitudes de hasta 4 pies. Este tipo de crecimiento colgante la hace ideal para macetas o cestas colgantes, donde puede exhibir su espectacular forma de cola de burro.</p>
+
+            <h4>Agave Americana</h4>
+            <p>El Agave Americana es una planta suculenta que crece de manera lenta y puede tardar décadas en florecer. Cuando florece, desarrolla una espiga floral que puede alcanzar hasta 9 metros de altura. Después de la floración, la planta normalmente muere, dejando hijuelos para su propagación. Este tipo de crecimiento es característico de las plantas monocárpicas, que florecen una sola vez en su vida y mueren después de la floración y la maduración de los frutos.</p>
+
+            <hr size="10" color="1cb129">
+        </div>
+    </div>
+</body>
+</html>

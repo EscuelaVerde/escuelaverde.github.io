@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Escuela Verde</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+        
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("wallpaperbetter.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+        
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 150px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .integrante-card:hover {
+    transform: translateY(-5px); /* Opcional: leve elevación al pasar el mouse */
+}
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Orientacion Juvenil y Profesional-II</h1>
+        <hr class="header-divider">
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imagenes del desarrollo</h2>
+            
+            <div class="integrante-card">
+                <h3>Compañeros trabajando</h3>
+                <img width="400" height="200" src="o1.jpeg" alt="Materiales para hacer papel reciclado">
+                <p>En la imagen se muestra a nuestro compañero Omar Castro Tovar realizando la primera hoja de papel reciclado a base de cáscaras de frutas y verduras, iniciando el proceso de creación de estas hojas ecológicas a partir de desechos orgánicos. </p>
+            </div>
+             <div class="integrante-card">
+                <h3>Claca verde</h3>
+                <img width="400" height="200" src="o2.jpeg" alt="Materiales para hacer papel reciclado">
+                <p>Hoja artesanal creada a partir de fibras vegetales, mostrando la versatilidad de los materiales reciclados en nuestro proyecto de sustentabilidad. El diseño orgánico demuestra cómo los desechos naturales pueden transformarse en productos útiles y estéticos.</p>
+            </div>
+            <div class="integrante-card">
+                <h3>Hojas terminadas</h3>
+                <img width="400" height="200" src="o3.jpeg" alt="Materiales para hacer papel reciclado">
+                <p>Producto terminado: conjunto de hojas ecológicas obtenidas a partir de desechos orgánicos. Cada una muestra la textura única y rusticidad característica del proceso artesanal, listas para convertirse en libretas sustentables que reducen el impacto ambiental. </p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>Docente: Diana Ivette Garduño Bazán</h2>
+            
+            <h3>Integrantes del equipo:</h3>
+            <ul>
+                <li><strong>Albarrán Sánchez Natali Zoe</strong></li>
+                <li><strong>Castro Tovar Rubén Omar</strong></li>
+                <li><strong>Cuevas Lara Ángel Ismael</strong></li>
+                <li><strong>Mendoza López Jonathan Isaac</strong></li>
+                <li><strong>Patifio rosas Jesica jatziri</strong></li>
+                <li><strong>Gómez irán Maximiliano</strong></li>
+            </ul>
+            <p>Grupo: 21M10</p>
+
+            <h2>Proyecto: Hojas de papel reciclado</h2>
+            <p>La asignatura de orientación juvenil en este proyecto aula ha colaborado con la información sobre la creación de hojas de papel reciclado. Así mismo con estas hojas se realizará una pequeña libreta como proyecto para contaminar menos y apoyar al reciclaje.</p>
+            
+            <p>Dentro de nuestra investigación analizamos la importancia del reciclaje de la cual aprendimos que realizar hojas de papel reciclado contribuye a la conservación del medio ambiente y el desarrollo sostenible.</p>
+
+            <h2>La realización de hojas de papel reciclado</h2>
+            <p>La producción de papel es una de las industrias más grandes y contaminantes del mundo. La demanda de papel ha aumentado significativamente en las últimas décadas, lo que ha llevado a la deforestación, la contaminación del agua y la generación de residuos. Sin embargo, hay una solución simple y efectiva para reducir el impacto ambiental de la producción de papel: la realización de hojas de papel reciclado.</p>
+
+            <h2>El proceso de realización de hojas de papel reciclado</h2>
+            <p>La realización de hojas de papel reciclado es un proceso relativamente simple que requiere algunos materiales básicos, como papel usado, agua, un tamiz y un marco. El proceso comienza con la recolección de papel usado, que se clasifica y se limpia para eliminar cualquier material extraño. Luego, el papel se tritura y se mezcla con agua para crear una pasta. La pasta se pasa por un tamiz para eliminar cualquier impureza y se deja secar en un marco. Una vez seca, la hoja de papel reciclado está lista para ser utilizada.</p>
+
+            <h3>Materiales necesarios:</h3>
+            <ol>
+                <li>Hojas de papel ya usadas</li>
+                <li>Un marco de fotografía</li>
+                <li>Malla mosquitera</li>
+                <li>Una esponja</li>
+                <li>Licuadora</li>
+                <li>Agua</li>
+            </ol>
+
+            <h2>Beneficios ambientales</h2>
+            <p>La realización de hojas de papel reciclado tiene numerosos beneficios ambientales. En primer lugar, reduce la demanda de madera y preserva los bosques. La producción de papel reciclado también requiere menos agua y energía que la producción de papel nuevo, lo que reduce la contaminación del agua y la emisión de gases de efecto invernadero. Además, el reciclaje de papel reduce la cantidad de residuos que se envían a los vertederos.</p>
+
+            <h2>Beneficios económicos y sociales</h2>
+            <p>La realización de hojas de papel reciclado también tiene beneficios económicos y sociales. La producción de papel reciclado puede ser más económica que la producción de papel nuevo, lo que puede generar ahorros para las empresas y los consumidores. Además, la industria del reciclaje de papel puede generar empleos y oportunidades económicas. La realización de hojas de papel reciclado también puede ser una herramienta educativa para enseñar sobre la importancia del reciclaje y la sostenibilidad.</p>
+
+            <h2>Conclusión</h2>
+            <p>La realización de hojas de papel reciclado es un paso importante hacia la sostenibilidad. Al reducir la demanda de madera, la contaminación del agua y la generación de residuos, podemos contribuir a la conservación del medio ambiente y al desarrollo sostenible. Además, la producción de papel reciclado puede ser más económica y generar empleos y oportunidades económicas. Es importante que todos nos involucremos en la realización de hojas de papel reciclado y en la promoción del reciclaje y la sostenibilidad.</p>
+
+            <h2>Recomendaciones</h2>
+            <ul>
+                <li>Utilizar papel reciclado en lugar de papel nuevo siempre que sea posible.</li>
+                <li>Reciclar papel usado y participar en programas de reciclaje.</li>
+                <li>Apoyar a las empresas que producen papel reciclado y promueven la sostenibilidad.</li>
+                <li>Educar a otros sobre la importancia del reciclaje y la sostenibilidad.</li>
+            </ul>
+
+            <p>La realización de hojas de papel reciclado es una práctica simple y efectiva que puede contribuir significativamente a la conservación del medio ambiente y al desarrollo sostenible. Es importante que todos nos involucremos en esta práctica y promovamos el reciclaje y la sostenibilidad.</p>
+
+            <hr size="10" color="1cb129">
+        </div>
+    </div>
+</body>
+</html>

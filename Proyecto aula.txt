@@ -1,0 +1,340 @@
+Proyecto aula
+CECyT 19 "LEONA VICARIO"
+
+Edificio 070 Laboratorios N 01
+
+- *Superficie de construcción:513.65 m²
+
+Local | Descripción
+- 001 | Laboratorio de Docencia Biología
+- 002 | Almacén Laboratorio Docencia Biología
+- 003 | Laboratorio de Docencia Química
+- 004 | Almacén Laboratorio Docencia Química
+- 005 | Laboratorio de Docencia Química
+
+Planos Técnicos Básicos
+- Febrero 2004
+
+
+
+
+CECyT 19 "LEONA VICARIO"
+
+Edificio 005 Aulas N 01
+
+- Superficie de construcción:190.29 m²
+
+Local | Descripción
+- 001 | Coordinación
+- 002 | Jefatura
+- 003 | Aula (2)
+- 004 | Área de Apoyo Servicios Educativos
+- 005 | Subdirección
+- 006 | Área Psicológico
+- 007 | Jefatura (Servicios Estudiantiles)
+- 011 | Consejovi
+- 012 | Área de Apoyo
+
+Planos Técnicos Básicos
+- Febrero 2024
+
+CECyT 19 "LEONA VICARIO"
+
+Edificio 061 Aulas N 01
+
+- Superficie de construcción:799.26 m²
+
+Local | Descripción
+- 001 | Pasillo Cubierto Externo
+- 002 | Aula de Teoría
+- 003 | Aula de Teoría
+- 004 | Aula de Teoría
+- 005 | Aula de Teoría
+- 006 | Aula de Teoría
+
+Planos Técnicos Básicos
+- Febrero 2004
+- Clave: 04/09
+
+
+CECyT 19 "LEONA VICARIO"
+
+Edificio 062 Aulas N 01
+
+Superficie de construcción:750.88 m²
+
+Locales:
+- 001 | Aula de Teoría
+- 002 | Aula de Teoría
+- 003 | Aula de Teoría
+- 004 | Aula de Teoría
+- 005 | Aula de Teoría
+- 006 | Aula de Teoría
+- 007 | Aula de Teoría
+- 008 | Laboratorios Multidisciplinarios
+- 009 | Laboratorios Multidisciplinarios
+- 010 | Laboratorios Multidisciplinarios
+- 011 | Laboratorios Multidisciplinarios
+- 012 | Laboratorios Multidisciplinarios
+- 013 | Laboratorios Multidisciplinarios
+- 014 | Talleres y/o Manufacturas Avanzadas
+- 015 | Talleres y/o Manufacturas Avanzadas
+- 016 | Talleres y/o Manufacturas Avanzadas
+- 017 | Talleres y/o Manufacturas Avanzadas
+- 018 | Talleres y/o Manufacturas Avanzadas
+- 019 | Talleres y/o Manufacturas Avanzadas
+- 020 | Sala Audiovisual
+- 021 | Sala Audiovisual
+
+Planos Técnicos Básicos
+- Febrero 2014
+- Clave: 0610
+
+
+
+
+
+CECyT 19 "LEONA VICARIO"
+
+Edificio 004
+
+Localización:
+1. Planta Primer Piso: Unidades de Aprendizaje del Área Tecnología y de Especialidad
+2. Planta Segundo Piso: Unidades de Aprendizaje del Área Básica
+3. Planta Tercer Piso: Talleres y Desarrollo Tecnológico
+
+Supervisión Académica:
+1. Coordinador Académico
+2. Jefe de División Académica
+
+Fecha: Febrero 2024
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="texto c">Imagenes</h2>
+        
+            <h2 class="texto c" style="margin-top: 125px;">Jonathan</h2>
+            <h3 class="texto"><p><IMG width="400" height="200" SRC="compu1.jpeg" alt="descripcion" style="margin-top: 10px;"></p> Compañero Jonathan empezando a hacer la estructura basica de los codigos en HTML 5 psrs empezara a hacer la página web.</h3>
+    
+       
+       
+            </div>
+        <div class="main-content">
+
+<h2 class="texto j">Docente: Esquivel Miranda José Alberto</h2>
+<h3 class="texto j">Integrantes del equipo de desarrollo web:<br>
+- García Romero Jonathan (Diseño de estructura HTML)<br>
+- Hernández Sánchez Axel Yael (Implementación CSS)<br>
+- Jiménez Flórez Erick Yael (Integración de contenidos)<br>
+- Morales Ureña Hugo Sebastián (Revisión de código)<br>
+- Rodríguez Sánchez Jesús Emanuel (Gestión de imágenes)<br>
+- Silva Rentería Luis Enrique (Control de versiones)<br><br></h3>
+
+<h3 class="texto j">Grupo: 2IM10</h3>
+
+<h2 class="texto j">Introducción</h2>
+<h3 class="texto j">En el marco del proyecto aula "Escuela Verde con Camino a la Sustentabilidad", la asignatura de Computación Básica II tuvo un rol fundamental como plataforma integradora de todos los contenidos generados por las distintas materias participantes. Nuestra misión fue desarrollar una herramienta tecnológica que permitiera documentar, organizar y compartir de manera accesible y atractiva los diversos aportes al proyecto.</h3>
+
+<h3 class="texto j">La página web elaborada representa no solo un producto final, sino también un proceso de aprendizaje donde aplicamos conocimientos fundamentales de desarrollo web utilizando HTML5 y CSS básico. Este proyecto nos permitió comprender cómo la tecnología puede servir como puente entre diferentes disciplinas académicas y como herramienta para la difusión de iniciativas sustentables.</h3>
+
+<h2 class="texto j">Objetivos del Proyecto</h2>
+<h3 class="texto j">Los objetivos específicos de nuestra participación fueron:</h3>
+<ul class="texto j">
+    <li>Diseñar y desarrollar una página web responsive que integrara todos los contenidos del proyecto aula</li>
+    <li>Aplicar los conceptos de estructura semántica HTML aprendidos en clase</li>
+    <li>Implementar estilos CSS básicos para mejorar la presentación visual</li>
+    <li>Organizar la información de manera lógica y accesible</li>
+    <li>Crear un sistema de navegación interna entre secciones</li>
+    <li>Optimizar imágenes y recursos multimedia para web</li>
+    <li>Trabajar colaborativamente usando metodologías básicas de desarrollo web</li>
+</ul>
+
+<h2 class="texto j">Proceso de Desarrollo</h2>
+<h3 class="texto j">El desarrollo del sitio web siguió una metodología por etapas:</h3>
+
+<h3 class="texto j">1. Análisis de Requerimientos</h3>
+<ul class="texto j">
+    <li>Reunión con representantes de otras materias para entender sus necesidades</li>
+    <li>Definición de la estructura general del sitio</li>
+    <li>Identificación de los tipos de contenido a incluir</li>
+</ul>
+
+<h3 class="texto j">2. Diseño de la Estructura</h3>
+<ul class="texto j">
+    <li>Creación de un diagrama de flujo del sitio</li>
+    <li>Definición de la jerarquía de información</li>
+    <li>Diseño del sistema de navegación</li>
+    <li>Selección de paleta de colores acorde al tema ecológico</li>
+</ul>
+
+<h3 class="texto j">3. Implementación Técnica</h3>
+<ul class="texto j">
+    <li>Maquetación HTML5 semántica con etiquetas como header, section, article, footer</li>
+    <li>Uso de divs para organización del layout</li>
+    <li>Implementación de estilos CSS para:
+        <ul>
+            <li>Tipografía (Google Fonts)</li>
+            <li>Colores y fondos</li>
+            <li>Diseño de cajas (márgenes, padding, bordes)</li>
+            <li>Disposición flexible (Flexbox)</li>
+        </ul>
+    </li>
+    <li>Inserción y optimización de imágenes</li>
+    <li>Creación de reglas CSS para diferentes tamaños de pantalla</li>
+</ul>
+
+<h3 class="texto j">4. Integración de Contenidos</h3>
+<ul class="texto j">
+    <li>Recopilación y organización de textos proporcionados por otras materias</li>
+    <li>Formateo consistente de encabezados y párrafos</li>
+    <li>Creación de listas ordenadas y no ordenadas</li>
+    <li>Implementación de enlaces internos y externos</li>
+</ul>
+
+<h3 class="texto j">5. Pruebas y Ajustes</h3>
+<ul class="texto j">
+    <li>Validación del código HTML</li>
+    <li>Pruebas de visualización en diferentes navegadores</li>
+    <li>Ajustes de responsividad</li>
+    <li>Corrección de errores reportados por usuarios de prueba</li>
+</ul>
+
+<h2 class="texto j">Tecnologías Utilizadas</h2>
+<h3 class="texto j">Para el desarrollo de este proyecto web utilizamos las siguientes tecnologías:</h3>
+<ul class="texto j">
+    <li><strong>HTML5:</strong> Para la estructura y contenido del sitio
+        <ul>
+            <li>Etiquetas semánticas (header, section, article, footer)</li>
+            <li>Elementos de formato (h1-h6, p, ul/ol, li)</li>
+            <li>Elementos multimedia (img)</li>
+            <li>Elementos de agrupación (div)</li>
+        </ul>
+    </li>
+    <li><strong>CSS:</strong> Para el diseño y presentación
+        <ul>
+            <li>Selectores de clase</li>
+            <li>Propiedades de texto (font-family, text-align)</li>
+            <li>Modelo de caja (margin, padding, border)</li>
+            <li>Flexbox para diseño flexible</li>
+            <li>Colores hexadecimales y por nombre</li>
+        </ul>
+    </li>
+    <li><strong>Google Fonts:</strong> Para la tipografía DM Sans</li>
+    <li><strong>Sistemas de Control de Versiones:</strong> Uso básico de GitHub para compartir código</li>
+</ul>
+
+<h2 class="texto j">Desafíos Técnicos y Soluciones</h2>
+<h3 class="texto j">Durante el desarrollo enfrentamos varios desafíos técnicos:</h3>
+
+<h3 class="texto j">1. Organización del Layout</h3>
+<h3 class="texto j"><strong>Problema:</strong> Crear una estructura de dos columnas donde la barra lateral permaneciera fija mientras el contenido principal fuera desplazable.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Implementamos un contenedor flex con dirección row-reverse y asignamos un ancho fijo a la barra lateral mientras que el contenido principal ocupaba el espacio restante con flex: 1.</h3>
+
+<h3 class="texto j">2. Responsividad</h3>
+<h3 class="texto j"><strong>Problema:</strong> Hacer que el sitio se visualizara correctamente en diferentes tamaños de pantalla.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Usamos unidades relativas como porcentajes para anchos y em/rem para tamaños de fuente, además de media queries básicas para ajustar el diseño en pantallas pequeñas.</h3>
+
+<h3 class="texto j">3. Integración de Contenido Diverso</h3>
+<h3 class="texto j"><strong>Problema:</strong> Cada materia proporcionó información en formatos diferentes que necesitaban ser estandarizados.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Creamos plantillas HTML consistentes para cada sección y normalizamos los estilos CSS para mantener coherencia visual.</h3>
+
+<h2 class="texto j">Aprendizajes Obtenidos</h2>
+<h3 class="texto j">Este proyecto nos permitió consolidar y ampliar diversos conocimientos:</h3>
+
+<h3 class="texto j">1. Habilidades Técnicas</h3>
+<ul class="texto j">
+    <li>Uso correcto de etiquetas HTML semánticas</li>
+    <li>Aplicación de estilos CSS para diseño visual</li>
+    <li>Implementación de layouts con Flexbox</li>
+    <li>Manejo de imágenes para web</li>
+    <li>Principios básicos de diseño web</li>
+</ul>
+
+<h3 class="texto j">2. Habilidades de Trabajo en Equipo</h3>
+<ul class="texto j">
+    <li>División de tareas según habilidades</li>
+    <li>Coordinación para integrar diferentes partes del proyecto</li>
+    <li>Revisión de código entre pares</li>
+    <li>Resolución colaborativa de problemas</li>
+</ul>
+
+<h3 class="texto j">3. Habilidades de Gestión de Proyectos</h3>
+<ul class="texto j">
+    <li>Planificación por etapas</li>
+    <li>Cumplimiento de plazos</li>
+    <li>Comunicación con otros equipos (materias)</li>
+    <li>Documentación del proceso</li>
+</ul>
+
+<h2 class="texto j">Impacto del Proyecto</h2>
+<h3 class="texto j">La página web desarrollada ha tenido varios impactos positivos:</h3>
+
+<h3 class="texto j">1. Para el Proyecto Aula</h3>
+<ul class="texto j">
+    <li>Centralización de toda la información relacionada</li>
+    <li>Mayor visibilidad de los esfuerzos de todas las materias</li>
+    <li>Documentación permanente de los avances</li>
+    <li>Facilidad para compartir los resultados con la comunidad escolar</li>
+</ul>
+
+<h3 class="texto j">2. Para Nuestro Aprendizaje</h3>
+<ul class="texto j">
+    <li>Aplicación práctica de conocimientos teóricos</li>
+    <li>Desarrollo de habilidades de resolución de problemas reales</li>
+    <li>Comprensión del ciclo completo de desarrollo web</li>
+    <li>Motivación al ver nuestros conocimientos materializados en un producto útil</li>
+</ul>
+
+<h3 class="texto j">3. Para la Comunidad Escolar</h3>
+<ul class="texto j">
+    <li>Acceso fácil a información sobre el proyecto sustentable</li>
+    <li>Ejemplo concreto de cómo la tecnología apoya iniciativas ecológicas</li>
+    <li>Inspiración para futuros proyectos interdisciplinarios</li>
+</ul>
+
+<h2 class="texto j">Mejoras Futuras</h2>
+<h3 class="texto j">Identificamos varias áreas de mejora para versiones futuras del sitio:</h3>
+<ul class="texto j">
+    <li>Implementar un sistema de navegación más robusto con menú fijo</li>
+    <li>Agregar interactividad básica con JavaScript</li>
+    <li>Mejorar el sistema responsive para móviles</li>
+    <li>Incluir un formulario de contacto para sugerencias</li>
+    <li>Agregar una galería fotográfica interactiva</li>
+    <li>Implementar un sistema de búsqueda interno</li>
+    <li>Crear versiones imprimibles de los contenidos</li>
+</ul>
+
+<h2 class="texto j">Conclusión</h2>
+<h3 class="texto j">El desarrollo de esta página web como parte del proyecto "Escuela Verde con Camino a la Sustentabilidad" ha sido una experiencia educativa sumamente enriquecedora. No solo nos permitió aplicar y consolidar nuestros conocimientos técnicos en HTML y CSS, sino que también nos enseñó valiosas lecciones sobre trabajo colaborativo, gestión de proyectos y la importancia de la tecnología como herramienta para el cambio social y ambiental.</h3>
+
+<h3 class="texto j">Este proyecto demostró cómo la computación puede servir como puente entre diferentes disciplinas, integrando y dando visibilidad a los esfuerzos de todas las materias participantes. El sitio web resultante no solo documenta el trabajo realizado, sino que también servirá como inspiración para futuras generaciones de estudiantes y como testimonio del compromiso de nuestro grupo con la sustentabilidad y la innovación tecnológica.</h3>
+
+<h2 class="texto j">Fuentes Utilizadas</h2>
+<h3 class="texto j">Para el desarrollo de este proyecto web consultamos las siguientes fuentes:</h3>
+<ul class="texto j">
+    <li>Apuntes de clase de Computación Básica II</li>
+    <li>MDN Web Docs - Referencia de HTML y CSS</li>
+    <li>W3Schools - Tutoriales básicos de HTML/CSS</li>
+    <li>Google Fonts - Documentación de implementación</li>
+    <li>Guías de estilo web accesible</li>
+    <li>Manuales de buenas prácticas en desarrollo web</li>
+</ul>
+
+<h3 class="texto j">Referencias específicas:</h3>
+<a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN HTML Reference</a><br>
+<a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN CSS Reference</a><br>
+<a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a><br>
+<a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a><br>
+<a href="https://fonts.google.com/" target="_blank">Google Fonts</a><br>
+<hr size="10" color="1cb129">  a  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Escuela Verde</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+
+
+
+

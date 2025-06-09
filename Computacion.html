@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Computacion Basica-II</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+        
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("maybe.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+        
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: var(--verde-oscuro);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+             transition: transform 0.3s ease;
+        }
+.integrante-card:hover {
+    transform: translateY(-5px); /* Opcional: leve elevación al pasar el mouse */
+}
+        
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--verde-oscuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Materia: Computación Básica II</h1>
+        <hr class="header-divider">
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imágenes del Proyecto</h2>
+            
+            <div class="integrante-card">
+                <h3>Jonathan</h3>
+                <img width="400" height="200" src="compu1.jpeg" alt="Jonathan trabajando en el código">
+                <p>Compañero Jonathan empezando a hacer la estructura básica de los códigos en HTML5 para comenzar el desarrollo de la página web.</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>Docente: Esquivel Miranda José Alberto</h2>
+            
+            <h3>Integrantes del equipo de desarrollo web:</h3>
+            <ul>
+                <li><strong>García Romero Jonathan</strong> - Diseño de estructura HTML</li>
+                <li><strong>Hernández Sánchez Axel Yael</strong> - Implementación CSS</li>
+                <li><strong>Jiménez Flórez Erick Yael</strong> - Integración de contenidos</li>
+                <li><strong>Morales Ureña Hugo Sebastián</strong> - Revisión de código</li>
+                <li><strong>Rodríguez Sánchez Jesús Emanuel</strong> - Gestión de imágenes</li>
+                <li><strong>Silva Rentería Luis Enrique</strong> - Control de versiones</li>
+            </ul><h3 class="texto j">Grupo: 2IM10</h3>
+
+<h2 class="texto j">Introducción</h2>
+<h3 class="texto j">En el marco del proyecto aula "Escuela Verde con Camino a la Sustentabilidad", la asignatura de Computación Básica II tuvo un rol fundamental como plataforma integradora de todos los contenidos generados por las distintas materias participantes. Nuestra misión fue desarrollar una herramienta tecnológica que permitiera documentar, organizar y compartir de manera accesible y atractiva los diversos aportes al proyecto.</h3>
+
+<h3 class="texto j">La página web elaborada representa no solo un producto final, sino también un proceso de aprendizaje donde aplicamos conocimientos fundamentales de desarrollo web utilizando HTML5 y CSS básico. Este proyecto nos permitió comprender cómo la tecnología puede servir como puente entre diferentes disciplinas académicas y como herramienta para la difusión de iniciativas sustentables.</h3>
+
+<h2 class="texto j">Objetivos del Proyecto</h2>
+<h3 class="texto j">Los objetivos específicos de nuestra participación fueron:</h3>
+<ul class="texto j">
+    <li>Diseñar y desarrollar una página web responsive que integrara todos los contenidos del proyecto aula</li>
+    <li>Aplicar los conceptos de estructura semántica HTML aprendidos en clase</li>
+    <li>Implementar estilos CSS básicos para mejorar la presentación visual</li>
+    <li>Organizar la información de manera lógica y accesible</li>
+    <li>Crear un sistema de navegación interna entre secciones</li>
+    <li>Optimizar imágenes y recursos multimedia para web</li>
+    <li>Trabajar colaborativamente usando metodologías básicas de desarrollo web</li>
+</ul>
+
+<h2 class="texto j">Proceso de Desarrollo</h2>
+<h3 class="texto j">El desarrollo del sitio web siguió una metodología por etapas:</h3>
+
+<h3 class="texto j">1. Análisis de Requerimientos</h3>
+<ul class="texto j">
+    <li>Reunión con representantes de otras materias para entender sus necesidades</li>
+    <li>Definición de la estructura general del sitio</li>
+    <li>Identificación de los tipos de contenido a incluir</li>
+</ul>
+
+<h3 class="texto j">2. Diseño de la Estructura</h3>
+<ul class="texto j">
+    <li>Creación de un diagrama de flujo del sitio</li>
+    <li>Definición de la jerarquía de información</li>
+    <li>Diseño del sistema de navegación</li>
+    <li>Selección de paleta de colores acorde al tema ecológico</li>
+</ul>
+
+<h3 class="texto j">3. Implementación Técnica</h3>
+<ul class="texto j">
+    <li>Maquetación HTML5 semántica con etiquetas como header, section, article, footer</li>
+    <li>Uso de divs para organización del layout</li>
+    <li>Implementación de estilos CSS para:
+        <ul>
+            <li>Tipografía (Google Fonts)</li>
+            <li>Colores y fondos</li>
+            <li>Diseño de cajas (márgenes, padding, bordes)</li>
+            <li>Disposición flexible (Flexbox)</li>
+        </ul>
+    </li>
+    <li>Inserción y optimización de imágenes</li>
+    <li>Creación de reglas CSS para diferentes tamaños de pantalla</li>
+</ul>
+
+<h3 class="texto j">4. Integración de Contenidos</h3>
+<ul class="texto j">
+    <li>Recopilación y organización de textos proporcionados por otras materias</li>
+    <li>Formateo consistente de encabezados y párrafos</li>
+    <li>Creación de listas ordenadas y no ordenadas</li>
+    <li>Implementación de enlaces internos y externos</li>
+</ul>
+
+<h3 class="texto j">5. Pruebas y Ajustes</h3>
+<ul class="texto j">
+    <li>Validación del código HTML</li>
+    <li>Pruebas de visualización en diferentes navegadores</li>
+    <li>Ajustes de responsividad</li>
+    <li>Corrección de errores reportados por usuarios de prueba</li>
+</ul>
+
+<h2 class="texto j">Tecnologías Utilizadas</h2>
+<h3 class="texto j">Para el desarrollo de este proyecto web utilizamos las siguientes tecnologías:</h3>
+<ul class="texto j">
+    <li><strong>HTML5:</strong> Para la estructura y contenido del sitio
+        <ul>
+            <li>Etiquetas semánticas (header, section, article, footer)</li>
+            <li>Elementos de formato (h1-h6, p, ul/ol, li)</li>
+            <li>Elementos multimedia (img)</li>
+            <li>Elementos de agrupación (div)</li>
+        </ul>
+    </li>
+    <li><strong>CSS:</strong> Para el diseño y presentación
+        <ul>
+            <li>Selectores de clase</li>
+            <li>Propiedades de texto (font-family, text-align)</li>
+            <li>Modelo de caja (margin, padding, border)</li>
+            <li>Flexbox para diseño flexible</li>
+            <li>Colores hexadecimales y por nombre</li>
+        </ul>
+    </li>
+    <li><strong>Google Fonts:</strong> Para la tipografía DM Sans</li>
+    <li><strong>Sistemas de Control de Versiones:</strong> Uso básico de GitHub para compartir código</li>
+</ul>
+
+<h2 class="texto j">Desafíos Técnicos y Soluciones</h2>
+<h3 class="texto j">Durante el desarrollo enfrentamos varios desafíos técnicos:</h3>
+
+<h3 class="texto j">1. Organización del Layout</h3>
+<h3 class="texto j"><strong>Problema:</strong> Crear una estructura de dos columnas donde la barra lateral permaneciera fija mientras el contenido principal fuera desplazable.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Implementamos un contenedor flex con dirección row-reverse y asignamos un ancho fijo a la barra lateral mientras que el contenido principal ocupaba el espacio restante con flex: 1.</h3>
+
+<h3 class="texto j">2. Responsividad</h3>
+<h3 class="texto j"><strong>Problema:</strong> Hacer que el sitio se visualizara correctamente en diferentes tamaños de pantalla.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Usamos unidades relativas como porcentajes para anchos y em/rem para tamaños de fuente, además de media queries básicas para ajustar el diseño en pantallas pequeñas.</h3>
+
+<h3 class="texto j">3. Integración de Contenido Diverso</h3>
+<h3 class="texto j"><strong>Problema:</strong> Cada materia proporcionó información en formatos diferentes que necesitaban ser estandarizados.</h3>
+<h3 class="texto j"><strong>Solución:</strong> Creamos plantillas HTML consistentes para cada sección y normalizamos los estilos CSS para mantener coherencia visual.</h3>
+
+<h2 class="texto j">Aprendizajes Obtenidos</h2>
+<h3 class="texto j">Este proyecto nos permitió consolidar y ampliar diversos conocimientos:</h3>
+
+<h3 class="texto j">1. Habilidades Técnicas</h3>
+<ul class="texto j">
+    <li>Uso correcto de etiquetas HTML semánticas</li>
+    <li>Aplicación de estilos CSS para diseño visual</li>
+    <li>Implementación de layouts con Flexbox</li>
+    <li>Manejo de imágenes para web</li>
+    <li>Principios básicos de diseño web</li>
+</ul>
+
+<h3 class="texto j">2. Habilidades de Trabajo en Equipo</h3>
+<ul class="texto j">
+    <li>División de tareas según habilidades</li>
+    <li>Coordinación para integrar diferentes partes del proyecto</li>
+    <li>Revisión de código entre pares</li>
+    <li>Resolución colaborativa de problemas</li>
+</ul>
+
+<h3 class="texto j">3. Habilidades de Gestión de Proyectos</h3>
+<ul class="texto j">
+    <li>Planificación por etapas</li>
+    <li>Cumplimiento de plazos</li>
+    <li>Comunicación con otros equipos (materias)</li>
+    <li>Documentación del proceso</li>
+</ul>
+
+<h2 class="texto j">Impacto del Proyecto</h2>
+<h3 class="texto j">La página web desarrollada ha tenido varios impactos positivos:</h3>
+
+<h3 class="texto j">1. Para el Proyecto Aula</h3>
+<ul class="texto j">
+    <li>Centralización de toda la información relacionada</li>
+    <li>Mayor visibilidad de los esfuerzos de todas las materias</li>
+    <li>Documentación permanente de los avances</li>
+    <li>Facilidad para compartir los resultados con la comunidad escolar</li>
+</ul>
+
+<h3 class="texto j">2. Para Nuestro Aprendizaje</h3>
+<ul class="texto j">
+    <li>Aplicación práctica de conocimientos teóricos</li>
+    <li>Desarrollo de habilidades de resolución de problemas reales</li>
+    <li>Comprensión del ciclo completo de desarrollo web</li>
+    <li>Motivación al ver nuestros conocimientos materializados en un producto útil</li>
+</ul>
+
+<h3 class="texto j">3. Para la Comunidad Escolar</h3>
+<ul class="texto j">
+    <li>Acceso fácil a información sobre el proyecto sustentable</li>
+    <li>Ejemplo concreto de cómo la tecnología apoya iniciativas ecológicas</li>
+    <li>Inspiración para futuros proyectos interdisciplinarios</li>
+</ul>
+
+<h2 class="texto j">Mejoras Futuras</h2>
+<h3 class="texto j">Identificamos varias áreas de mejora para versiones futuras del sitio:</h3>
+<ul class="texto j">
+    <li>Implementar un sistema de navegación más robusto con menú fijo</li>
+    <li>Agregar interactividad básica con JavaScript</li>
+    <li>Mejorar el sistema responsive para móviles</li>
+    <li>Incluir un formulario de contacto para sugerencias</li>
+    <li>Agregar una galería fotográfica interactiva</li>
+    <li>Implementar un sistema de búsqueda interno</li>
+    <li>Crear versiones imprimibles de los contenidos</li>
+</ul>
+
+<h2 class="texto j">Conclusión</h2>
+<h3 class="texto j">El desarrollo de esta página web como parte del proyecto "Escuela Verde con Camino a la Sustentabilidad" ha sido una experiencia educativa sumamente enriquecedora. No solo nos permitió aplicar y consolidar nuestros conocimientos técnicos en HTML y CSS, sino que también nos enseñó valiosas lecciones sobre trabajo colaborativo, gestión de proyectos y la importancia de la tecnología como herramienta para el cambio social y ambiental.</h3>
+
+<h3 class="texto j">Este proyecto demostró cómo la computación puede servir como puente entre diferentes disciplinas, integrando y dando visibilidad a los esfuerzos de todas las materias participantes. El sitio web resultante no solo documenta el trabajo realizado, sino que también servirá como inspiración para futuras generaciones de estudiantes y como testimonio del compromiso de nuestro grupo con la sustentabilidad y la innovación tecnológica.</h3>
+
+<h2 class="texto j">Fuentes Utilizadas</h2>
+<h3 class="texto j">Para el desarrollo de este proyecto web consultamos las siguientes fuentes:</h3>
+<ul class="texto j">
+    <li>Apuntes de clase de Computación Básica II</li>
+    <li>MDN Web Docs - Referencia de HTML y CSS</li>
+    <li>W3Schools - Tutoriales básicos de HTML/CSS</li>
+    <li>Google Fonts - Documentación de implementación</li>
+    <li>Guías de estilo web accesible</li>
+    <li>Manuales de buenas prácticas en desarrollo web</li>
+</ul>
+
+<h3 class="texto j">Referencias específicas:</h3>
+<a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN HTML Reference</a><br>
+<a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN CSS Reference</a><br>
+<a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a><br>
+<a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a><br>
+<a href="https://fonts.google.com/" target="_blank">Google Fonts</a><br>
+<hr size="10" color="1cb129">
+
+        </div>
+
+    </div>
+</body>
+</html>

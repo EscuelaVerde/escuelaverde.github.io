@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Biología Básica</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("pexels-mali-802221.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .integrante-card:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid var(--gris-medio);
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--verde-principal);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Materia: Biología Básica</h1>
+        <hr class="header-divider">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imágenes del Proyecto</h2>
+            <div class="integrante-card">
+    <h3>¿Qué tapitas puedo donar?</h3>
+    <img width="400" height="200" src="b1.png" alt="Tipos de tapitas donables">
+    <p>El Banco de Tapitas A.C. clasifica las tapitas plásticas que se pueden donar según su uso: alimentos, higiene personal, limpieza, medicamentos y más.</p>
+    <footer style="font-size: 0.9em; margin-top: 10px; color: #555;">
+        Pie de página: Información proporcionada por Banco de Tapitas A.C. sobre los tipos de tapitas plásticas que se pueden donar, organizadas por categoría (alimentos, higiene personal, limpieza, medicamentos y otros). 
+        Más en: <a href="https://www.bancodetapitas.org" target="_blank">www.bancodetapitas.org</a>
+    </footer>
+    <div class="integrante-card">
+    <h3>Tapitas que se pueden donar</h3>
+    <img width="400" height="200" src="b2.png" alt="Ejemplos de tapitas aceptadas">
+    <p>Ejemplos visuales de tapitas aceptadas: agua, garrafón, aceite, café, cremas, medicamentos, entre otros envases de productos comunes.</p>
+    <footer style="font-size: 0.9em; margin-top: 10px; color: #555;">
+      
+    </footer>
+</div>
+<div class="integrante-card">
+    <h3>¿A cuánto equivalen las tapitas recolectadas?</h3>
+    <img width="400" height="200" src="b3.png" alt="Equivalencia de tapitas">
+    <p>Cada kilo de tapitas recolectadas puede ser transformado en tratamientos médicos, suplementos alimenticios, alimentos básicos, hospedaje o transporte para pacientes.</p>
+    <footer style="font-size: 0.9em; margin-top: 10px; color: #555;">
+       
+    </footer>
+</div>
+<div class="integrante-card">
+    <h3>Donación de Despensa</h3>
+    <img width="400" height="200" src="b4.png" alt="Productos para donación">
+    <p>El Banco de Tapitas A.C. también acepta productos básicos de despensa como frijol, arroz, sopas, café, leche en polvo, papel higiénico, entre otros.</p>
+    <footer style="font-size: 0.9em; margin-top: 10px; color: #555;">
+       
+    </footer>
+</div>
+</div>
+        </div>
+        <div class="main-content">
+            <h2>Materia: Biología Básica</h2>
+            <h3>PROYECTO AULA “TAPATON CECyT 19”</h3>
+            <h3>Docente: Verónica Mendoza Arce</h3>
+            <h3>COLABORADORES:</h3>
+            <ul>
+                <li>Carbajal Mendoza Axel Elihu</li>
+                <li>González García Eduardo Gabriel</li>
+                <li>Hernández Moreno Santiago</li>
+                <li>López Lara Leonel</li>
+                <li>Mancilla Hernández Leonardo Vladimir</li>
+                <li>Tinoco Sosa Astrid Isabel</li>
+            </ul>
+            <p><strong>PRESENTAN:</strong></p>
+
+<h2>Campaña Integral de Recolección de Tapitas Plásticas</h2>
+<h3>Introducción</h3>
+<p>Nuestro proyecto "Tapatón CECyT 19" se expande para convertirse en una campaña permanente de recolección de tapas plásticas en nuestra institución. Esta iniciativa busca no solo apoyar a niños con cáncer a través del Banco de Tapitas A.C., sino también fomentar una cultura de reciclaje y responsabilidad social entre toda la comunidad educativa.</p>
+
+<h3>Objetivos Ampliados</h3>
+<ul>
+  <li>Recolectar 1,000 kg de tapitas plásticas durante el semestre</li>
+  <li>Involucrar al 80% de la comunidad estudiantil en la campaña</li>
+  <li>Establecer puntos de recolección permanentes en todas las áreas del plantel</li>
+  <li>Realizar actividades de concientización sobre el cáncer infantil y el reciclaje</li>
+  <li>Crear alianzas con negocios locales para ampliar la recolección</li>
+</ul>
+
+<h3>Plan de Acción Detallado</h3>
+<h4>Fase 1: Sensibilización (2 semanas)</h4>
+<ul>
+  <li>Charlas informativas sobre reciclaje y cáncer infantil</li>
+  <li>Proyección de documentales y videoconferencias con testimonios</li>
+</ul>
+
+<h4>Fase 2: Recolección Intensiva (8 semanas)</h4>
+<ul>
+  <li>Colocación de contenedores decorados en puntos estratégicos</li>
+  <li>Competencias entre grupos y jornadas de recolección express</li>
+</ul>
+
+<h4>Fase 3: Vinculación Comunitaria (permanente)</h4>
+<ul>
+  <li>Colaboraciones con cafeterías, farmacias y tiendas locales</li>
+  <li>Participación en eventos comunitarios</li>
+</ul>
+
+<h3>Tipos de Tapitas Aceptadas</h3>
+<ul>
+  <li>Bebidas, productos de limpieza, alimentos, higiene personal</li>
+  <li>Medicamentos, marcadores, cosméticos y garrafones</li>
+</ul>
+
+<h3>Proceso de Acopio y Entrega</h3>
+<ul>
+  <li>Recolección diaria y clasificación básica</li>
+  <li>Pesaje semanal y contacto mensual con el Banco de Tapitas</li>
+</ul>
+
+<h3>Impacto Ambiental Esperado</h3>
+<ul>
+  <li>Reducción de 2 toneladas de plástico en vertederos</li>
+  <li>Ahorro de 4,000 kWh y menor emisión de CO2</li>
+</ul>
+
+<h3>Componente Educativo</h3>
+<p>El proyecto se integra con materias como Biología, Química, Matemáticas y Ética para reforzar el aprendizaje a través de la acción.</p>
+
+<h3>Evaluación y Seguimiento</h3>
+<ul>
+  <li>Tablero de avances, reportes, encuestas y documentación multimedia</li>
+</ul>
+
+<h3>Presupuesto Estimado</h3>
+<ul>
+  <li>Contenedores: $2,500</li>
+  <li>Difusión: $1,800</li>
+  <li>Transporte: $1,200</li>
+  <li>Reconocimientos: $800</li>
+  <li><strong>Total:</strong> $6,300 (a gestionar mediante patrocinios)</li>
+</ul>
+
+<h3>Cronograma Anual</h3>
+<table>
+  <tr><th>Mes</th><th>Actividades Principales</th></tr>
+  <tr><td>Enero</td><td>Planeación y diseño</td></tr>
+  <tr><td>Febrero</td><td>Lanzamiento oficial</td></tr>
+  <tr><td>Marzo-Mayo</td><td>Recolección intensiva</td></tr>
+  <tr><td>Junio</td><td>Entrega de resultados</td></tr>
+  <tr><td>Julio</td><td>Evaluación y mejora</td></tr>
+  <tr><td>Agosto</td><td>Reinicio de campaña</td></tr>
+</table>
+
+<h3>Invitación a la Comunidad</h3>
+<p>¡Únete a nuestro Tapatón permanente! Cada tapa que dones representa:</p>
+<ul>
+  <li>1 minuto de terapia para un niño con cáncer</li>
+  <li>5 gramos menos de plástico contaminando nuestro planeta</li>
+  <li>Un acto de solidaridad que inspira a otros</li>
+</ul>
+<p><strong>"Juntos podemos convertir pequeñas tapitas en grandes esperanzas de vida."</strong></p>
+        </div>
+    </div>
+</body>
+</html>

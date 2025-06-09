@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Comunicación y Liderazgo</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+        
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("fondoc.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+        
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: var(--verde-oscuro);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .integrante-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        p, li {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--verde-oscuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Comunicación y Liderazgo</h1>
+        <hr class="header-divider">
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imágenes del Proyecto</h2>
+            
+            <div class="integrante-card">
+                <h3>Bancas Ecológicas</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85" alt="Bancas hechas de tarimas">
+                <p>Ejemplo de bancas ecológicas creadas a partir de tarimas de madera recicladas, mostrando el producto final del proyecto.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Proceso de Construcción</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1551651658-4c0e5a0e5a0e" alt="Construcción de bancas">
+                <p>Equipo trabajando en el desarme de tarimas y construcción de las bancas, mostrando el proceso de elaboración.</p>
+            </div>
+
+            <div class="integrante-card">
+                <h3>Materiales Reciclados</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Tarimas de madera">
+                <p>Tarimas de madera en desuso que serán transformadas en bancas funcionales para la escuela.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Bancas Instaladas</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae" alt="Bancas en la escuela">
+                <p>Bancas terminadas instaladas en áreas comunes de la escuela, mejorando los espacios de convivencia.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Equipo Trabajando</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Equipo trabajando">
+                <p>Integrantes del proyecto colaborando en el lijado y ensamblaje de las bancas ecológicas.</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>Docente: Rodriguez Moncayo Laura Natalia</h2>
+
+            <h3>Integrantes:</h3>
+            <ul>
+                <li>Alvarado Cruz Chelsea Abril</li>
+                <li>Avilés Cirilo Sergio Owen</li>
+                <li>Castañeda Ávila Maria Fernanda</li>
+                <li>Jicalan Aguilera Jorge Armando</li>
+                <li>Rosales Hernández Jairo Santiago</li>
+                <li>Trejo Torres Bryan Alexis</li>
+                <li>Vázquez Valencia Cristal Aileen</li>
+            </ul>
+            
+            <h3>Grupo: 2IM10</h3>
+            <p>La asignatura de Comunicación y Liderazgo en el proyecto aula "Escuela Verde con Camino a la Sustentabilidad" se encargó de la reutilización de tarimas de madera para fabricar bancas ecológicas y funcionales.</p>
+
+            <h2>Objetivo del Proyecto:</h2>
+            <p>El objetivo principal es reutilizar tarimas de madera en desuso para crear bancas ecológicas y funcionales que mejoren las áreas comunes de la escuela. Este proyecto busca promover la conciencia ambiental, el reciclaje y la participación estudiantil en actividades sostenibles.</p>
+
+            <h2>Problemas Abordados:</h2>
+            <ol>
+                <li>
+                    <h4>Falta de Mobiliario Escolar:</h4>
+                    <p>Muchas escuelas, especialmente en contextos con recursos limitados, carecen de mobiliario adecuado en áreas comunes, lo que afecta la comodidad y convivencia de los alumnos. La ausencia de suficientes bancas o espacios para sentarse genera incomodidad y limita el uso óptimo de los patios, jardines o zonas exteriores de la institución.</p>
+                </li>
+                <li>
+                    <h4>Desperdicio de Materiales Reutilizables:</h4>
+                    <p>En diversos lugares se generan constantemente residuos de tarimas de madera que son descartadas sin considerar su potencial reutilización. Estos materiales, que aún pueden tener una vida útil prolongada, suelen terminar en vertederos, contribuyendo a la acumulación de desechos y al deterioro ambiental.</p>
+                </li>
+            </ol>
+
+            <h2>Proceso de elaboración:</h2>
+            <ol>
+                <li>
+                    <h4>Recolección de Materiales:</h4>
+                    <p>Conseguir tarimas en buen estado y reunir herramientas necesarias. Verificar que la madera esté libre de humedad, insectos o daños severos.</p>
+                </li>
+                <li>
+                    <h4>Desarme y Selección de Piezas:</h4>
+                    <p>Desarmar las tarimas y seleccionar las mejores tablas para el asiento, respaldo y estructura.</p>
+                </li>
+                <li>
+                    <h4>Diseño de la Banca:</h4>
+                    <p>Elegir un diseño sencillo y funcional, medir y marcar las piezas. Realizar un boceto o plano si es posible.</p>
+                </li>
+                <li>
+                    <h4>Corte de la Madera:</h4>
+                    <p>Cortar las piezas según las medidas establecidas, asegurándose de que los cortes sean rectos y precisos.</p>
+                </li>
+                <li>
+                    <h4>Lijado de las Superficies:</h4>
+                    <p>Lijar las piezas para eliminar astillas, suciedad y bordes filosos, mejorando la seguridad y facilitando la aplicación del acabado.</p>
+                </li>
+                <li>
+                    <h4>Ensamblaje de la Banca:</h4>
+                    <p>Armar la estructura comenzando por la base, fijar el asiento y luego el respaldo con clavos o tornillos. Verificar que la estructura esté nivelada y firme.</p>
+                </li>
+                <li>
+                    <h4>Aplicación del Acabado:</h4>
+                    <p>Aplicar barniz, pintura o sellador para proteger la madera contra la intemperie y mejorar su apariencia. Dejar secar completamente antes de usar.</p>
+                </li>
+                <li>
+                    <h4>Ubicación en la Escuela:</h4>
+                    <p>Colocar las bancas en áreas designadas, como patios, pasillos o zonas de descanso, asegurándose de que estén firmes y en lugares seguros para su uso diario.</p>
+                </li>
+            </ol>
+
+            <h2>Participantes y Tareas:</h2>
+            <p>El equipo conformado por: Alvarado Cruz Chelsea Abril, Aviles Cirilo Sergio Owen, Castañeda Avila María Fernanda, Jicalan Aguilera Jorge Armando, Rosales Hernández Jairo Santiago, Trejo Torres Bryan Alexis, y Vazquez Valencia Cristal Aileen. Cada uno tiene tareas específicas en el proceso de recolección, desarme, diseño, corte, lijado, ensamblaje, aplicación del acabado y colocación de las bancas.</p>
+
+            <h2>Beneficios del Proyecto:</h2>
+            <ol>
+                <li>
+                    <h4>Mejora del Espacio Escolar:</h4>
+                    <p>Proporciona zonas adecuadas para el descanso, la socialización y la espera, incrementando la comodidad de alumnos, docentes y visitantes. Al ubicar las bancas en patios, pasillos y jardines, estos espacios se vuelven más funcionales, fomentando su uso como áreas de convivencia y esparcimiento.</p>
+                </li>
+                <li>
+                    <h4>Promoción de la Conciencia Ecológica:</h4>
+                    <p>Fomenta el reciclaje y la reutilización de materiales, embelleciendo el entorno escolar y proyectando una imagen de orden y compromiso con el medio ambiente. Esto no solo mejora la estética del lugar, sino que también promueve actitudes positivas en la comunidad educativa, reforzando el sentido de pertenencia y respeto por los espacios comunes.</p>
+                </li>
+                <li>
+                    <h4>Participación Estudiantil:</h4>
+                    <p>Involucra a los alumnos en el proceso, fortaleciendo valores de sostenibilidad, trabajo en equipo y responsabilidad ambiental. Las bancas, al ser fruto del trabajo colaborativo y del reciclaje, se convierten en un símbolo visible de cómo es posible transformar residuos en recursos útiles para el bienestar de la comunidad.</p>
+                </li>
+            </ol>
+
+            <h2>Impacto en la Sustentabilidad:</h2>
+            <p>El proyecto promueve la reutilización de materiales, reduce la generación de desechos y fomenta una cultura de reciclaje dentro de la comunidad educativa. Al transformar tarimas en bancas funcionales, se extiende la vida útil de estos materiales y se reduce la demanda de recursos nuevos, como madera fresca o mobiliario industrial. Además, la iniciativa fomenta una cultura de reciclaje al demostrar de forma práctica que es posible construir objetos útiles y duraderos a partir de materiales en desuso, creando conciencia en los alumnos y docentes sobre la importancia de reducir, reutilizar y reciclar.</p>
+
+            <h2>Dificultades y Soluciones:</h2>
+            <ol>
+                <li>
+                    <h4>Conseguir Tarimas en Buen Estado:</h4>
+                    <p>Establecer contactos para donaciones y revisar las tarimas antes de su uso. Se buscará establecer contacto con la escuela, tiendas o centros de distribución que utilicen este tipo de materiales, con el objetivo de solicitar donaciones.</p>
+                </li>
+                <li>
+                    <h4>Herramientas y Mano de Obra:</h4>
+                    <p>Gestionar préstamos de herramientas y colaboración de la comunidad escolar. Se propondrá gestionar el préstamo o colaboración por parte de la comunidad escolar, padres de familia o personas con experiencia en carpintería.</p>
+                </li>
+                <li>
+                    <h4>Condiciones Climáticas:</h4>
+                    <p>Aplicar tratamientos adicionales para proteger las bancas de la intemperie y considerar su ubicación en zonas con sombra o techadas. Se aplicarán selladores, barnices o pinturas resistentes a la intemperie para proteger las bancas de las condiciones climáticas.</p>
+                </li>
+            </ol>
+
+            <h2>Conclusión:</h2>
+            <p>El proyecto de reutilización de tarimas para la construcción de bancas no solo mejora la infraestructura escolar, sino que también tiene un valor educativo significativo. Promueve la conciencia ambiental y la participación activa de los alumnos, demostrando cómo transformar residuos en recursos útiles. Este tipo de iniciativas fomentan una cultura de reciclaje y sostenibilidad, beneficiando a toda la comunidad escolar.</p>
+
+            <hr size="10" color="1cb129">
+        </div>
+    </div>
+</body>
+</html>

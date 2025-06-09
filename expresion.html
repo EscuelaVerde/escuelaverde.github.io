@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Aula - Expresión Oral y Escrita II</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-principal: #1cb129;
+            --verde-oscuro: #0d4601;
+            --gris-claro: #f5f5f5;
+            --gris-medio: #e0e0e0;
+            --texto-oscuro: #333333;
+            --blanco-transparente: rgba(255, 255, 255, 0.85);
+        }
+        
+        body {
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-oscuro);
+            background-image: url("plantas-jovenes-que-crecen-en-un-invernadero-comercial-de-plantas-muy-grandes.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .header-divider {
+            height: 10px;
+            background-color: var(--verde-principal);
+            margin: 0;
+            border: none;
+        }
+        
+        h1.titulo-materia {
+            text-align: center;
+            color: var(--verde-oscuro);
+            margin: 20px auto;
+            font-size: 2.2em;
+            padding: 15px;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .header-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco-transparente);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar {
+            width: 400px;
+            padding: 25px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: var(--verde-oscuro);
+            border-bottom: 2px solid var(--verde-principal);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--verde-oscuro);
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: var(--verde-oscuro);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        .integrante-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+             transition: transform 0.3s ease;
+        }
+.integrante-card:hover {
+    transform: translateY(-5px); /* Opcional: leve elevación al pasar el mouse */
+}
+        
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid var(--gris-medio);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--verde-oscuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <hr class="header-divider">
+        <h1 class="titulo-materia">Expresión Oral y Escrita II</h1>
+        <hr class="header-divider">
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Imágenes del Proyecto</h2>
+            
+            <div class="integrante-card">
+                <h3>Sistema Hidropónico NFT</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85" alt="Sistema hidropónico NFT">
+                <p>Ejemplo de un sistema hidropónico NFT (Nutrient Film Technique) donde una fina película de solución nutritiva circula por los canales.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Cultivo Hidropónico de Lechugas</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1551651658-4c0e5a0e5a0e" alt="Cultivo de lechugas">
+                <p>Cultivo de lechugas en sistema hidropónico DWC (Deep Water Culture) donde las raíces están sumergidas en solución nutritiva oxigenada.</p>
+            </div>
+
+            <div class="integrante-card">
+                <h3>Sistema Aeropónico</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Sistema aeropónico">
+                <p>Sistema aeropónico avanzado donde las raíces están suspendidas en el aire y se rocían con solución nutritiva en forma de niebla.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Huerto Escolar Hidropónico</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae" alt="Huerto escolar">
+                <p>Implementación de un huerto hidropónico escolar que permite a los estudiantes aprender sobre agricultura sostenible.</p>
+            </div>
+            
+            <div class="integrante-card">
+                <h3>Sistema de Mecha</h3>
+                <img width="400" height="200" src="https://images.unsplash.com/photo-1518481852452-9415b262eba4" alt="Sistema de mecha">
+                <p>Sistema hidropónico de mecha, uno de los más simples que no requiere electricidad ni bombas.</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>Docente: Profa. Alma Laura</h2>
+            
+            <h3>Integrantes del equipo:</h3>
+            <ul>
+                <li><strong>Díaz Hernández Brisia Renata</strong></li>
+                <li><strong>García Morales Harumi</strong></li>
+                <li><strong>Gómez Zuñida Adriana</strong></li>
+                <li><strong>Morales Salazar Ángel Alfonso</strong></li>
+                <li><strong>Padilla Gutiérrez Allisson Karina</strong></li>
+                <li><strong>Parra Santoyo Víctor Maximiliano</strong></li>
+            </ul>
+            
+            <h3>Grupo: 2IM10</h3>
+
+            <h2>Hidroponía: Escuela Verde en Camino a la Sustentabilidad con Razón Social</h2>
+
+            <h3>Introducción</h3>
+            <p>La hidroponía es una alternativa innovadora y sostenible que está revolucionando la forma de cultivar alimentos. En lugar de utilizar tierra, las plantas se desarrollan en agua con nutrientes, lo que permite ahorrar recursos, reducir el uso de químicos y cultivar en espacios urbanos o reducidos. Este proyecto escolar busca promover la conciencia ecológica mediante la implementación de sistemas hidropónicos en el entorno educativo, fomentando prácticas responsables, tecnológicas y respetuosas con el medio ambiente.</p>
+
+            <h3>¿Qué es la hidroponía?</h3>
+            <p>La hidroponía es una forma de cultivar plantas sin utilizar tierra. En lugar del suelo, las raíces de las plantas están en contacto con agua enriquecida con nutrientes esenciales. En algunos casos se usa un sustrato inerte (como fibra de coco, perlita o lana de roca) para sostener las plantas, pero los nutrientes siempre provienen del agua.</p>
+
+            <h3>¿Cómo funciona?</h3>
+            <p>Las raíces absorben directamente del agua todos los minerales y nutrientes que necesitan para crecer. Este sistema permite controlar de forma precisa factores como la luz, el pH, la temperatura, la humedad y la concentración de nutrientes. Gracias a este control, las plantas pueden crecer más rápido y de forma más saludable que en cultivos tradicionales.</p>
+
+            <h3>Tipos de sistemas hidropónicos</h3>
+            <ul>
+                <li><strong>NFT (Nutrient Film Technique):</strong> Una película delgada de solución nutritiva circula por tubos o canales en donde están las raíces. Es ideal para plantas pequeñas y de ciclo corto.</li>
+                <li><strong>DWC (Deep Water Culture):</strong> Las raíces se sumergen directamente en un depósito con agua y nutrientes. El agua se oxigena constantemente con burbujas para mantener vivas las raíces.</li>
+                <li><strong>Sistema de Mecha:</strong> Una mecha transporta el agua desde un depósito hasta el sustrato donde está la planta. Es un sistema simple y no requiere electricidad.</li>
+                <li><strong>Ebb and Flow (Flujo y reflujo):</strong> El agua sube e inunda el sustrato por un tiempo y luego se drena. Este proceso se repite varias veces al día.</li>
+                <li><strong>Aeroponía:</strong> Las raíces están suspendidas en el aire y se rocían con una solución nutritiva en forma de niebla. Es uno de los sistemas más avanzados y eficientes.</li>
+            </ul>
+
+            <h3>Ventajas de la hidroponía</h3>
+            <ul>
+                <li>Ahorra hasta un 90% de agua comparado con el cultivo tradicional.</li>
+                <li>No depende del suelo, por lo que se puede hacer en casi cualquier lugar.</li>
+                <li>Permite un crecimiento más rápido y eficiente de las plantas.</li>
+                <li>Reduce el uso de pesticidas y químicos.</li>
+                <li>Es ideal para espacios urbanos o zonas con poca tierra fértil.</li>
+            </ul>
+
+            <h3>Desventajas de la hidroponía</h3>
+            <ul>
+                <li>Requiere una inversión inicial en materiales, equipos y nutrientes.</li>
+                <li>Es necesario tener conocimientos técnicos para mantener el sistema en equilibrio.</li>
+                <li>Si el sistema falla (por ejemplo, si se va la luz o se detiene la bomba), las plantas pueden dañarse rápidamente.</li>
+            </ul>
+
+            <h3>¿Qué se puede cultivar con hidroponía?</h3>
+            <p>Se pueden cultivar muchas plantas, especialmente las de crecimiento rápido o de tamaño compacto. Algunos ejemplos son:</p>
+            <ul>
+                <li>Lechuga</li>
+                <li>Espinaca</li>
+                <li>Acelga</li>
+                <li>Albahaca</li>
+                <li>Fresas</li>
+                <li>Tomate</li>
+                <li>Pepino</li>
+                <li>Pimientos</li>
+                <li>Hierbas aromáticas (menta, cilantro, orégano)</li>
+            </ul>
+
+            <h3>Conclusión</h3>
+            <p>La hidroponía es una técnica de cultivo moderna, ecológica y eficiente que representa una solución viable frente a los retos de la agricultura tradicional. Gracias a su adaptabilidad, permite cultivar alimentos en cualquier espacio, incluso en zonas urbanas o con suelos no aptos para el cultivo. Su implementación en el entorno escolar no solo enseña conocimientos técnicos, sino que también promueve valores de sostenibilidad, conciencia ambiental y responsabilidad social. Este proyecto reafirma el compromiso de nuestra escuela con el medio ambiente, la educación integral y el bienestar colectivo.</p>
+
+            <hr size="10" color="1cb129">
+        </div>
+    </div>
+</body>
+</html>
